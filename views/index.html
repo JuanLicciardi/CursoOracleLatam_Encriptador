@@ -3,9 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script src="https://kit.fontawesome.com/da2720495a.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="../images/Page.svg" type="image/x-icon">
+
+
+
+    <title>Encriptador</title>
 </head>
 <body>
-    
+    <!-- Header de la Pagina-->
+    <header class="header">
+        <img class="header_logo" src="../images/Logo_Alura.png" alt="Logo de Alura">
+    </header>
+
+    <!-- Main de la Pagina-->
+    <main>
+
+        <section class="encriptar">
+            <textarea name="enc_textArea" id="enc_textArea" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea>
+            <div class="message">
+                <h6> <i class="fa-solid fa-circle-exclamation"></i> Solo letras minusculas y sin acento</h6>
+            </div>
+            <div class="enc_button">
+                <button class="btn_encriptar">Encriptar</button>
+                <button class="btn_desencriptar">Desencriptar</button>
+            </div>
+        </section>
+
+        <section class="message">
+            <img src="../images/Muneco.png" alt="">
+            <article>
+                <h4>Ningún mensaje fue encontrado</h4>
+                <p>Ingresa el texto que desees encriptar o desencriptar</p>
+            </article>
+        </section>
+
+        <section class="desencriptar">
+            <textarea name="des_textArea" id="des_textArea" cols="20" rows="10" ></textarea>
+            <div class="des_button">
+                <button class="btn_copiar">Copiar</button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer de la Pagina-->
+    <footer>
+        <div class="contactos">
+            <i class="fa-solid fa-envelope"></i>
+            <i class="fa-brands fa-github"></i>
+            <i class="fa-brands fa-linkedin"></i>
+        </div>
+        <marquee behavior="" direction="">Realizado por Juan Eduardo Licciardi</marquee>
+    </footer>
 </body>
 </html>
