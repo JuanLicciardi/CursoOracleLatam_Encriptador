@@ -175,3 +175,47 @@ main{
 .desencriptar{
     display: none;
 }
+
+
+@media(min-width:768px) {
+
+    .encriptar{
+        width: 60%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+    }
+
+    .message{
+        width: 20%;
+    }
+
+    .message img{
+        display: flex;
+        width: 95%;
+        height: 60%;
+        margin: auto;
+    }
+
+    .message_article{
+        display: none;
+    }
+
+    .message{
+        display: none;
+    }
+
+    .desencriptar{
+        display: flex;
+        width: 20%;
+
+    }
+
+    @media(min-width:768px) {
+
+        body{
+            max-width: 1024px;
+        }
+    }
+    
+}    

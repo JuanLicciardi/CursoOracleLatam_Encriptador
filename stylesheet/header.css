@@ -25,3 +25,22 @@
     font-size: 28px;
     color:red
 }
+
+
+@media(min-width:768px) {
+    .header{
+        height: 100px;
+    }
+    .header_logo{
+        width: 10%;
+        height: 30%;
+        margin-left: 20px;
+    }
+
+    .header_title{
+        width: 75%;
+        font-size: 38px;
+        text-align: center;
+    }
+
+}    
