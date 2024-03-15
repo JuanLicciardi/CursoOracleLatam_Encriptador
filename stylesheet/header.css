@@ -1,0 +1,27 @@
+.header{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 98%;
+    border: 2px solid var(--colorBlue);
+    box-shadow: 3px 3px 3px cornflowerblue;
+    padding: 0;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    gap: 2px;
+}
+
+.header_logo{
+    margin-left: 2px;
+    margin-right: 5px;
+    width: 15%;
+    height: 50%;
+}
+
+.header_title{
+    margin: 2px;
+    padding: 0;
+    width: 80%;
+    font-size: 28px;
+    color:red
+}

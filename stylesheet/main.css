@@ -1,0 +1,180 @@
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 2px solid green;
+    padding: 1px;
+    width: 98%;
+}
+
+
+.encriptar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 2px solid blue;
+}
+
+.enc_textArea{
+    border: none;
+    width: 98%;
+}
+
+::placeholder{
+    color: var(--colorBlue);
+    font-size: 25px;
+    font-weight: bold;
+    
+}
+
+.encriptar_message{
+    display: flex;
+    width: 100%;
+    margin-top: 10px;
+    margin-top: 10px;
+}
+.encriptar_message h6{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    margin: 5px 15px 5px 0px;
+    font-size: 15px;
+}
+
+.encriptar_message i{
+    margin-left: 0px;
+    color:var(--exclamation)
+}
+
+.enc_button{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 95%;
+    margin: auto;   
+    gap:5px;
+}
+
+.btn_encriptar{
+    border: 3px solid var(--colorBlue);
+    display: block;
+    width: 100%;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 16px;
+    color: var(--colorBlue);
+
+}
+
+.btn_encriptar:hover{
+    background-color: var(--colorBlue);
+    color: white;
+    cursor: progress;
+}
+
+.btn_desencriptar{
+    border: 3px solid var(--colorBlue);
+    display: block;
+    width: 100%;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 16px;
+    color: var(--colorBlue);
+}
+
+.btn_desencriptar:hover{
+    background-color: var(--colorBlue);
+    color: white;
+    cursor: pointer;
+}
+
+.message{
+    background: #fff;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 25px;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    padding: 25px;
+    margin: 15px;
+}
+
+.message img{
+    display: none;
+}
+
+.message_article{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 95%;
+    padding:5px;
+}
+
+.message h4{
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.message p{
+    color: rgba(73, 80, 87, 1);
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+
+
+}
+
+.message{
+    display: none;
+}
+
+.desencriptar{
+    display: none;
+}
+
+.desencriptar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 98%;
+    margin-top: 10px;
+    border: 2px solid red;
+}
+
+.des_textArea{
+    border: none;
+    width: 98%;
+   
+}
+
+.des_button{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 95%;
+    margin: auto;   
+    gap:5px;
+}
+
+.btn_copiar {
+    border: 3px solid var(--colorBlue);
+    display: block;
+    width: 100%;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 16px;
+    color: var(--colorBlue);
+}
+
+.btn_copiar:hover{
+    background-color: var(--colorBlue);
+    color: white;
+    cursor: pointer;
+}
