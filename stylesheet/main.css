@@ -2,7 +2,6 @@ main{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    border: 2px solid green;
     padding: 1px;
     width: 98%;
 }
@@ -12,11 +11,11 @@ main{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    border: 2px solid blue;
 }
 
 .enc_textArea{
     border: none;
+    outline: none;
     width: 98%;
 }
 
@@ -69,7 +68,7 @@ main{
 .btn_encriptar:hover{
     background-color: var(--colorBlue);
     color: white;
-    cursor: progress;
+    cursor: pointer;
 }
 
 .btn_desencriptar{
@@ -131,13 +130,6 @@ main{
 
 }
 
-.message{
-    display: none;
-}
-
-.desencriptar{
-    display: none;
-}
 
 .desencriptar{
     display: flex;
@@ -146,12 +138,13 @@ main{
     width: 98%;
     margin-top: 10px;
     border: 2px solid red;
+    padding: 15px;
 }
 
 .des_textArea{
     border: none;
+    outline: none;
     width: 98%;
-   
 }
 
 .des_button{
@@ -177,4 +170,8 @@ main{
     background-color: var(--colorBlue);
     color: white;
     cursor: pointer;
+}
+
+.desencriptar{
+    display: none;
 }
