@@ -10,6 +10,7 @@ const txtDesencriptar = document.querySelector('.des_textArea')
 // ----- Variables secciones Encriptar, Mensaje, Desencriptar
 const messageSection = document.querySelector('.message')
 const desencriptarSection = document.querySelector('.desencriptar')
+const messageArticle = document.querySelector('.message_article')
 
 // ----- Variables Botones Encriptar, Desencriptar, Copiar
 const btnEncriptar = document.querySelector('.btn_encriptar') 
@@ -35,13 +36,24 @@ window.addEventListener('load',()=>{
         
 
     if (outerWidth<1024 && outerWidth>=768){
-        message.classList.remove('ocultar')
+        console.log('este es un tablet');
+        ocultarSection()
+        txtEncriptar.addEventListener("focus",handler_txtEncripFocus)
+        txtEncriptar.addEventListener("blur",handler_txtEncripBlur)        
+        btnEncriptar.addEventListener("click",handler_btnEncriptar)
+        btnCopiar.addEventListener("click",handler_btnCopiar)
+        btnDesencriptar.addEventListener("click",handler_btnDesencriptar)
 
         }
 
     if (outerWidth>=1024){
         console.log('este es un laptop');
-        
+        txtEncriptar.addEventListener("focus",handler_txtEncripFocus)
+        txtEncriptar.addEventListener("blur",handler_txtEncripBlur) 
+        btnEncriptar.addEventListener("click",handler_btnEncriptar_laptop)
+        btnCopiar.addEventListener("click",handler_btnCopiar)
+        btnDesencriptar.addEventListener("click",handler_btnDesencriptar)
+
         }
 
 
@@ -60,10 +72,14 @@ const handler_txtEncripFocus = ()=>{
 }
 
 const handler_txtEncripBlur = ()=>{
-        txtEncriptar.placeholder = "Ingrese el texto aqui"
-        txtDesencriptar.value = capturarTexto()
-        anularBotonDesencriptar()
-        desencriptarSection.style.display = 'none'
+        if(txtEncriptar.value == ""){
+            txtEncriptar.placeholder = "Ingrese el texto aqui"
+            txtDesencriptar.value = capturarTexto()
+            anularBotonDesencriptar()
+            desencriptarSection.style.display = 'none'
+            messageSection.style.display = 'flex'
+            messageArticle.style.display = 'none'
+        }
 }
 
 const handler_btnEncriptar = () =>{
@@ -84,6 +100,7 @@ const handler_btnDesencriptar = ()=>{
     console.log('contenido Text Area: ',capturarTexto())
     txtDesencriptar.value = dencriptarMessage(capturarTexto())
     console.log('contenido Text Area: ',txtDesencriptar.value)
+    //messageSection.style.display = "flex"
     desencriptarSection.style.display = 'flex' 
     console.log('podes desencriptar')
 }
@@ -97,6 +114,28 @@ const handler_btnCopiar = ()=>{
 
 }
 
+
+const handler_btnEncriptar_laptop = () =>{
+    console.log(capturarTexto())
+        console.log('llegamos');
+        console.log('captex : ', capturarTexto())
+        if(capturarTexto() == ""){
+            txtEncriptar.placeholder = "Ingrese el texto aqui"
+            messageArticle.style.display = 'flex'
+            anularBotonDesencriptar()
+        }else{
+            txtDesencriptar.value = encriptarMessage(capturarTexto())
+            messageSection.classList.add('ocultar')
+            messageSection.style.display = 'none'
+            desencriptarSection.style.display = 'flex' 
+            anularBotonDesencriptar()
+        }
+    }
+
+
+
+
+
 // -------------------------------- Acciones en el DOM ------------------------------
 
 const ocultarSection = ()=>{
@@ -107,7 +146,7 @@ const ocultarSection = ()=>{
 
 
 const capturarTexto = ()=>{
-        return txtEncriptar.value
+        return txtEncriptar.value.toLowerCase()
     }
     
 
