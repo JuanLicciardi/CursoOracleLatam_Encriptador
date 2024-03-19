@@ -179,6 +179,10 @@ main{
     display: none;
 }
 
+.ocultar{
+    display: none;
+}
+
 
 @media(min-width:768px) {
 
@@ -259,7 +263,7 @@ main{
         .message_article{
             display: none;
         }
-        
+
        /* .message{
             display: none;
         }*/
